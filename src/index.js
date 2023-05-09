@@ -1,5 +1,5 @@
 import './index.css';
-import { isDatetimeValid } from './validation.js';
+import { isDatetimeValid, validateCustomSelects } from './validation.js';
 import { clearErrorMessages, showErrorMessage } from './errorHandling.js';
 import { getValue } from './options.js';
 
@@ -11,7 +11,7 @@ const sendBtn = document.querySelector('#send-btn');
 const clearBtn = document.querySelector('#clear-btn');
 
 const datetimeInput = document.querySelector('#datetime');
-const datetimeError = document.querySelector('#datetime-error');
+const error = document.querySelector('#error');
 
 
 sendBtn.addEventListener('click', function (event) {
@@ -19,8 +19,13 @@ sendBtn.addEventListener('click', function (event) {
 
     clearErrorMessages();
 
+    if (!validateCustomSelects()) {
+        showErrorMessage(error, 'Необходимо заполнить все поля формы.');
+        return;
+    }
+
     if (!isDatetimeValid(datetimeInput.value)) {
-        showErrorMessage(datetimeError, 'Данные дата и/или время недействительны! Введите другие значения.');
+        showErrorMessage(error, 'Данные дата и/или время недействительны! Введите другие значения.');
         return;
     }
 

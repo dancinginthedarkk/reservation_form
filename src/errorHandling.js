@@ -1,10 +1,10 @@
-const datetimeError = document.querySelector('#datetime-error');
+const error = document.querySelector('#error');
 export function showErrorMessage(element, message) {
     element.textContent = message;
 }
 
 export function clearErrorMessages() {
-    datetimeError.textContent = '';
+    error.textContent = '';
 }
 
 

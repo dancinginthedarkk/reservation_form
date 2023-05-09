@@ -59,6 +59,7 @@ body {
 .form-control {
     border: 1px solid var(--main-border-color);
     height: 40px;
+    outline: none;
 
     border-radius: 5px;
     background-color: var(--color-white);
@@ -129,6 +130,7 @@ body {
     resize: vertical;
     max-height: 100px;
     min-height: 30px;
+    outline: none;
 }
 
 .form__textarea:focus,
