@@ -6,6 +6,7 @@
     --color-vk: rgb(0, 96, 255);
     --color-vk-hover: rgb(0, 96, 230);
     --color-ul-hover: #e9e9e9;
+    --color-error: #EB4250;
 }
 
 body {
@@ -141,7 +142,7 @@ body {
 .error-message {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    color: #EB4250;
+    color: var(--color-error);
 }
 
 .form__button {
@@ -159,7 +160,3 @@ body {
 .form__button:hover {
     background-color: var(--color-vk-hover);
 }
-
-
-
-
