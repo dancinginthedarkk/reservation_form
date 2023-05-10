@@ -1,0 +1,13 @@
+{
+    "source": {
+    "include": [
+        "src/errorHandling.js",
+        "src/index.js",
+        "src/options.js",
+        "src/validation.js"
+    ]
+},
+    "opts": {
+    "destination": "docs/"
+    }
+}
